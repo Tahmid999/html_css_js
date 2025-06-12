@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HTML Form Tutorial">
+    <meta name="keywords" content="html, css, form, registration">
+    <meta name="author" content="Tahmidur Rahman Muhtadee">
+    <link rel="icon" href="all_pic/icons8-form-96.png">
+    <title>Registration</title>
+</head>
+<body>
+    <div><h2>User Registration Form</h2></div>
+
+    <form action="" style="align-items: center; align-self: center;">
+        <fieldset style="align-self: center;">
+            <legend>User Registration Form</legend>
+
+            <div>
+                <label for="fname" style="align-content: center;">Enter First Name</label><br>
+                <input placeholder="First Name" type="text" name="name" id="fname" required >
+            </div>
+
+            <div >
+                <label for="lname">Enter last Name</label><br>
+                <input placeholder="Last Name" type="text" name="name" id="lname" >
+            </div>
+
+            <div >
+                <label for="telnum">Enter Your Phone Number</label><br>
+                <input placeholder="+xxx-xxx-xxx-xxxx" type="tel" name="n=telnum" id="telnum" >
+            </div>
+
+            <div >
+                <label for="email">Enter Your Email</label><br>
+                
+                <input placeholder="example@email.com" type="email" name="email" id="email" required>
+            </div>
+
+            <div >
+                <label for="pass">Enter a Password</label><br>
+                
+                <input type="password" name="pass" id="pass" required minlength="6" maxlength="8">
+            </div>
+
+            <div >
+                <label for="dob">Enter Your Date Of Birth</label><br>
+                
+                <input type="date" name="dob" id="dob" required min="2000-01-01" max="2007-12-30">
+            </div>
+
+            <div >
+                <label for="status">Select Your Maritial Status:</label><br>
+                
+                <input type="checkbox" name="status" id="status" >Merried
+                <input type="checkbox" name="status" id="status" >Unmerried
+                <input type="checkbox" name="status" id="status" >Devorced
+            </div>
+
+            <div >
+                <label for="gender">Select Your Country</label><br>
+                
+                <select name="country" id="country" required >
+                    <option value="NONE" selected>Select</option>
+                    <option value="BD">Bangladesh</option>
+                    <option value="IND">India</option>
+                    <option value="PK">Pakistan</option>
+                    <option value="USA">United State</option>
+                </select>
+            </div>
+
+            <div >
+                <label for="gender">Select Your Gender</label><br>
+                
+                <input type="radio" name="gender" id="gender" required> Male
+                <input type="radio" name="gender" id="gender" required> Female
+                <input type="radio" name="gender" id="gender" required> Other
+            </div>
+
+            <div >
+                <label for="photo">Upload Your Photo</label><br>
+                
+                <input type="file" name="photo" id="photo" required accept=".pdf, .jpg">
+                
+            </div>
+            <br>
+
+            <input type="submit" style="background-color: rgb(119, 238, 238); border-radius: 100px;" name="submit" id="submit">
+            <input type="reset" name="reset" id="reset">
+
+
+        </fieldset>
+    </form>
+    <br>
+    <br>
+
+    <video width="450px" height="300px" controls muted>
+        <source src="https://cdn.pixabay.com/video/2022/07/01/122742-726192569_large.mp4" type="video/mp4">
+    </video>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+        .container{
+            background-color: rgb(214, 174, 255);
+            height: 700px;
+            padding: 15px;
+
+            display: grid;
+            /* grid-template-columns: 2fr 4fr 2fr 2fr; */
+            grid-template-columns: auto auto auto auto;
+            /* grid-template-rows: 2fr 2fr 1fr 1fr; */
+            /* align-content: space-between; */
+            /* justify-content: space-between; */
+            /* gap: 10px; */
+            gap: 10px;
+            
+        }
+        .iteam{
+            color: rgb(0, 0, 0);
+            font-size: 25px;
+            /* height: 60px; */
+            /* height: 150px; */
+            text-align: center;
+            align-content: center;
+        }
+        #item1{
+            background-color: rgb(190, 124, 255);
+            grid-row: 1/ span 3;
+            
+        }
+        #item2{
+            background-color: rgb(158, 158, 255);
+        }
+        #item3{
+            background-color: rgb(158, 203, 255);
+        }
+        #item4{
+            background-color: rgb(158, 255, 252);
+        }
+        #item5{
+            background-color: rgb(158, 255, 205);
+            /* grid-column: 2/ span 3; */
+            grid-column: 2/4;
+        }
+        #item6{
+            background-color: rgb(228, 255, 158);
+            /* grid-column: 3/ span 2; */
+        }
+        #item7{
+            background-color: rgb(255, 237, 158);
+        }
+        #item8{
+            background-color: rgb(255, 182, 158);
+        }
+        #item9{
+            background-color: rgb(255, 158, 253);
+        }
+        
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="iteam" id="item1">1</div>
+        <div class="iteam" id="item2">2</div>
+        <div class="iteam" id="item3">3</div>
+        <div class="iteam" id="item4">4</div>
+        <div class="iteam" id="item5">5</div>
+        <div class="iteam" id="item6">6</div>
+        <div class="iteam" id="item7">7</div>
+        <div class="iteam" id="item8">8</div>
+        <div class="iteam" id="item9">9</div>
+    </div>
+</body>
+</html>

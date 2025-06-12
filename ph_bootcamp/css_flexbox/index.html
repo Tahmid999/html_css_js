@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS FlexBox</title>
+    <style>
+      body * {
+        /* border-style: solid;
+            border-color: chocolate;
+            border-width: 1px; */
+        /* border: solid 1px chocolate; */
+        color: rgb(15, 18, 42);
+        margin: 1%;
+      }
+      #alal {
+        /* width: 300px; */
+        /* display: inline-block;
+            margin: 20px; */
+        /* height: 60px; */
+        /* padding: 20px; */
+        background-color: rgb(221, 239, 255);
+        border-radius: 20px;
+        text-align: center;
+        padding: 20px;
+      }
+      #dulal {
+        /* width: 300px; */
+        /* display: inline-block; */
+        /* margin: 20px; */
+        /* margin-left: 50px; */
+        /* margin-top: 50px; */
+        padding: 20px;
+        background-color: rgb(250, 228, 200);
+        border-radius: 20px;
+        text-align: center;
+      }
+
+      #father {
+        display: flex;
+        flex-direction: row;
+        /* flex-wrap: nowrap; */
+        justify-content: space-between;
+        align-items: center;
+        /* gap: 20px; */
+      }
+      #nav {
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(244, 239, 202);
+        align-items: center;
+        height: 70px;
+      }
+      #menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+      li {
+        list-style-type: none;
+        /* padding: 10px; */
+        margin-right: 20px;
+      }
+      a {
+        text-decoration: none;
+        text-align: center;
+        color: rgb(24, 27, 32);
+        font-size: large;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="nav">
+      <a href=""
+        ><img
+          height="70px"
+          src="https://img.icons8.com/?size=512&id=wFfu6zXx15Yk&format=png"
+          alt="home"
+      /></a>
+
+      <ul id="menu">
+        <li class="li"><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li class="li"><a href="">Book</a></li>
+        <li class="li"><a href="">Contact</a></li>
+      </ul>
+    </header>
+
+    <div id="father">
+        <div id="alal">
+          <img
+            width="150px"
+            src="https://img.icons8.com/?size=512w&id=tjyEFIC7JgYq&format=png"
+            alt="alal"
+          />
+          <h1>I am Alal</h1>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo
+            eum laboriosam dolore dolorum voluptas? Accusantium aliquid distinctio
+            minima ratione? Laborum.
+          </p>
+        </div>
+        
+        <div id="dulal">
+            <img
+            width="150px"
+            src="https://img.icons8.com/?size=512w&id=Ntl3p6i3Ixi5&format=png"
+            alt="alal"
+            />
+            <h1>I am Dulal</h1>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo
+                eum laboriosam dolore dolorum voluptas? Accusantium aliquid distinctio
+                minima ratione? Laborum.
+            </p>
+        </div>
+        <div id="alal">
+          <img
+            width="150px"
+            src="https://img.icons8.com/?size=512w&id=tjyEFIC7JgYq&format=png"
+            alt="alal"
+          />
+          <h1>I am Alal</h1>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo
+            eum laboriosam dolore dolorum voluptas? Accusantium aliquid distinctio
+            minima ratione? Laborum.
+          </p>
+        </div>
+        <div id="dulal">
+            <img
+            width="150px"
+            src="https://img.icons8.com/?size=512w&id=Ntl3p6i3Ixi5&format=png"
+            alt="alal"
+            />
+            <h1>I am Dulal</h1>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo
+                eum laboriosam dolore dolorum voluptas? Accusantium aliquid distinctio
+                minima ratione? Laborum.
+            </p>
+        </div>
+        <div id="alal">
+          <img
+            width="150px"
+            src="https://img.icons8.com/?size=512w&id=tjyEFIC7JgYq&format=png"
+            alt="alal"
+          />
+          <h1>I am Alal</h1>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo
+            eum laboriosam dolore dolorum voluptas? Accusantium aliquid distinctio
+            minima ratione? Laborum.
+          </p>
+        </div>
+        
+        
+    </div>
+  </body>
+</html>

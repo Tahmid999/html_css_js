@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+        .container{
+            background-color: rgb(214, 174, 255);
+            height: 750px;
+            padding: 15px;
+            gap: 10px;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+        }
+        .iteam{
+            color: rgb(0, 0, 0);
+            background-color: azure;
+            font-size: 25px;
+            text-align: center;
+            align-content: center;
+        }
+        #item1{
+            grid-column: 1/ span 4;
+        }
+        #item2{
+            grid-row: 2/ span 2;
+        }
+        #item3{
+            grid-column: 2/ span 2;
+        }
+        #item5{
+            grid-column: 2/ span 3;
+        }
+        
+        
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="iteam" id="item1">Header</div>
+        <div class="iteam" id="item2">Menu</div>
+        <div class="iteam" id="item3">Menu</div>
+        <div class="iteam" id="item4">Right</div>
+        <div class="iteam" id="item5">Footer</div>
+        
+    </div>
+</body>
+</html>

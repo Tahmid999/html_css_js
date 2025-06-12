@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans - Custom CSS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset & Body Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* Dark blue-gray background */
+            color: #E5E7EB; /* Light gray text */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* Container */
+        .container {
+            width: 100%;
+            max-width: 1200px; /* Adjust as needed */
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem; /* 16px */
+            padding-right: 1rem; /* 16px */
+        }
+
+        /* Header Section */
+        .page-header {
+            padding-top: 3rem; /* 48px */
+            padding-bottom: 3rem; /* 48px */
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.25rem; /* 36px */
+            font-weight: 700;
+            margin-bottom: 1rem; /* 16px */
+            color: #FFFFFF;
+        }
+        .page-header h2 { /* Combined for simplicity, adjust if specific styling needed */
+            font-size: 2.25rem; /* 36px */
+            font-weight: 700;
+            margin-bottom: 1.5rem; /* 24px */
+            color: #FFFFFF;
+        }
+
+        .page-header .subtitle {
+            font-size: 1.125rem; /* 18px */
+            color: #D1D5DB; /* text-gray-300 */
+        }
+
+        /* Main Content Area */
+        .main-content {
+            flex-grow: 1;
+            padding-top: 2rem; /* 32px */
+            padding-bottom: 2rem; /* 32px */
+        }
+
+        /* Pricing Grid */
+        .pricing-grid {
+            display: grid;
+            gap: 2rem; /* 32px */
+        }
+
+        /* Card Styles */
+        .card {
+            background-color: #1F2937; /* Slightly lighter dark blue-gray */
+            border-radius: 0.75rem; /* 12px */
+            padding: 2rem; /* 32px */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+        }
+
+        .card-highlighted {
+            border: 2px solid #6D28D9; /* Purple border */
+        }
+
+        .card-title {
+            font-size: 1.5rem; /* 24px */
+            font-weight: 600;
+            margin-bottom: 0.5rem; /* 8px */
+            color: #FFFFFF;
+        }
+
+        .card-price {
+            font-size: 2.25rem; /* 36px */
+            font-weight: 700;
+            margin-bottom: 0.25rem; /* 4px */
+            color: #FFFFFF;
+        }
+
+        .card-price .term {
+            font-size: 1rem; /* 16px */
+            font-weight: 400;
+            color: #9CA3AF; /* text-gray-400 */
+        }
+
+        .card-description {
+            font-size: 0.875rem; /* 14px */
+            color: #9CA3AF; /* text-gray-400 */
+            margin-bottom: 1.5rem; /* 24px */
+        }
+
+        .card-includes-title {
+            font-size: 1rem; /* 16px */
+            font-weight: 600;
+            margin-bottom: 0.75rem; /* 12px */
+            color: #FFFFFF;
+        }
+
+        .custom-list {
+            list-style: none;
+            padding-left: 0;
+            font-size: 0.875rem; /* 14px */
+            color: #D1D5DB; /* text-gray-300 */
+            margin-bottom: 2rem; /* 32px */
+        }
+
+        .custom-list li {
+            position: relative;
+            padding-left: 1.75rem; /* Space for the checkmark */
+            margin-bottom: 0.75rem; /* Increased from 0.5rem for better spacing */
+        }
+
+        .custom-list li::before {
+            content: '✓'; /* Checkmark character */
+            position: absolute;
+            left: 0;
+            color: #34D399; /* Green checkmark */
+            font-weight: bold;
+            font-size: 1.2em; /* Slightly larger checkmark */
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-block; /* Or block if they should take full width of their parent */
+            padding: 0.75rem 1.5rem; /* 12px 24px */
+            border-radius: 0.5rem; /* 8px */
+            font-weight: 600;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+            border: 1px solid transparent; /* Base for potential outlined buttons */
+            cursor: pointer;
+            margin-top: auto; /* Pushes button to the bottom of the card */
+        }
+
+        .btn-primary {
+            background-color: #4A5568; /* Default button color (gray) */
+            color: #FFFFFF;
+        }
+        .btn-primary:hover {
+            background-color: #2D3748;
+        }
+
+        .btn-accent {
+            background-color: #6D28D9; /* Purple for the highlighted button */
+            color: #FFFFFF;
+        }
+        .btn-accent:hover {
+            background-color: #5B21B6;
+        }
+
+        /* Call to Action Section */
+        .cta-section {
+            padding-top: 3rem; /* 48px */
+            padding-bottom: 3rem; /* 48px */
+        }
+
+        .cta-banner {
+            background-image: linear-gradient(to right, #6D28D9, #4F46E5); /* Purple to Indigo gradient */
+            border-radius: 0.5rem; /* 8px */
+            padding: 2rem; /* 32px */
+            color: #FFFFFF;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cta-banner-text {
+            margin-bottom: 1.5rem; /* 24px */
+            text-align: center;
+        }
+
+        .cta-banner h2 {
+            font-size: 1.5rem; /* 24px */
+            font-weight: 700;
+            line-height: 1.3; /* Adjust for better readability */
+        }
+         .cta-banner p { /* Targeting the second line specifically */
+            font-size: 1.5rem; /* 24px */
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+
+        .btn-cta {
+            background-color: #FFFFFF;
+            color: #6D28D9; /* Purple text */
+            flex-shrink: 0; /* Prevents shrinking in flex container */
+        }
+        .btn-cta:hover {
+            background-color: #F3F4F6; /* Lighter gray on hover */
+        }
+
+        /* Footer Section */
+        .page-footer {
+            padding-top: 2rem; /* 32px */
+            padding-bottom: 2rem; /* 32px */
+            border-top: 1px solid #374151; /* border-gray-700 */
+            font-size: 0.875rem; /* 14px */
+            color: #9CA3AF; /* text-gray-400 */
+        }
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .footer-info {
+            margin-bottom: 1.5rem; /* 24px */
+            text-align: center;
+        }
+        .footer-logo-line {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0.5rem; /* 8px */
+        }
+        .footer-logo-name {
+            font-size: 1.25rem; /* 20px */
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-right: 0.5rem; /* 8px */
+        }
+        .footer-company-name {
+            color: #FFFFFF;
+        }
+        .footer-address {
+            /* Basic styling is fine */
+        }
+        .footer-social {
+            display: flex;
+            align-items: center;
+        }
+        .footer-social-text {
+            margin-right: 1rem; /* 16px */
+        }
+        .social-icon {
+            width: 2rem; /* 32px */
+            height: 2rem; /* 32px */
+            background-color: #374151; /* Darker gray */
+            border-radius: 9999px; /* Full circle */
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 0.5rem; /* 8px */
+            color: #E5E7EB;
+            text-decoration: none;
+            font-weight: bold; /* Make placeholder text bold */
+        }
+        .social-icon:hover {
+            background-color: #4B5563;
+        }
+
+        /* Responsive Adjustments */
+        @media (min-width: 768px) { /* Corresponds to md: breakpoint in Tailwind */
+            .page-header h1, .page-header h2 {
+                font-size: 3rem; /* ~text-5xl */
+            }
+            .page-header .subtitle {
+                font-size: 1.25rem; /* ~text-xl */
+            }
+            .main-content {
+                padding-top: 3rem; /* 48px */
+                padding-bottom: 3rem; /* 48px */
+            }
+            .pricing-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .cta-section {
+                padding-top: 4rem; /* 64px */
+                padding-bottom: 4rem; /* 64px */
+            }
+            .cta-banner {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 3rem; /* 48px */
+            }
+            .cta-banner-text {
+                margin-bottom: 0;
+                margin-right: 2rem; /* 32px */
+                text-align: left;
+            }
+            .cta-banner h2, .cta-banner p {
+                font-size: 1.875rem; /* ~text-3xl */
+            }
+            .page-footer {
+                padding-top: 3rem; /* 48px */
+                padding-bottom: 3rem; /* 48px */
+            }
+            .footer-content {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .footer-info {
+                margin-bottom: 0;
+                text-align: left;
+            }
+            .footer-logo-line {
+                justify-content: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Make the wise decision</h1>
+            <h2>for your business</h2>
+            <p class="subtitle">Choose from our affordable 3 packages</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="pricing-grid">
+                <div class="card">
+                    <div>
+                        <h3 class="card-title">Starter Plan</h3>
+                        <p class="card-price">$29<span class="term">/month</span></p>
+                        <p class="card-description">This package is suitable for teams 1-15 people.</p>
+                        <h4 class="card-includes-title">What's included:</h4>
+                        <ul class="custom-list">
+                            <li>10 GB Dedicated Hosting Free</li>
+                            <li>Best for Developers, Freelancers</li>
+                            <li>1 Year Support</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="btn btn-primary">Get Started</a>
+                </div>
+
+                <div class="card card-highlighted">
+                    <div>
+                        <h3 class="card-title">Basic Plan</h3>
+                        <p class="card-price">$79<span class="term">/month</span></p>
+                        <p class="card-description">This package is suitable for teams 1-50 people.</p>
+                        <h4 class="card-includes-title">What's included:</h4>
+                        <ul class="custom-list">
+                            <li>15 GB Dedicated Hosting Free</li>
+                            <li>Best for Developers, Freelancers</li>
+                            <li>5 Year Support</li>
+                            <li>Free Custom Domain</li>
+                            <li>Basic Statistics</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="btn btn-accent">Get Started</a>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <h3 class="card-title">Premium Plan</h3>
+                        <p class="card-price">$129<span class="term">/month</span></p>
+                        <p class="card-description">This package is suitable for teams 1-100 people.</p>
+                        <h4 class="card-includes-title">What's included:</h4>
+                        <ul class="custom-list">
+                            <li>20 GB Dedicated Hosting Free</li>
+                            <li>Best for Developers, Freelancers</li>
+                            <li>Unlimited Support</li>
+                            <li>Free Custom Domain</li>
+                            <li>Full Statistics</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-banner">
+                <div class="cta-banner-text">
+                    <h2>It will help you improve your writing</h2>
+                    <p>& bring ideas more clearly.</p>
+                </div>
+                <a href="#" class="btn btn-cta">Start 14 Days Free Trial</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="page-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo-line">
+                        <span class="footer-logo-name">CRAXINNO</span>
+                        <span class="footer-company-name">Craxinno Technologies Private Limited</span>
+                    </div>
+                    <p class="footer-address">D-162 Siddharth Nager, Rajasthan Jaipur Pincode: 302017</p>
+                </div>
+                <div class="footer-social">
+                    <span class="footer-social-text">Explore more about us here:</span>
+                    <a href="#" class="social-icon" aria-label="Facebook">F</a>
+                    <a href="#" class="social-icon" aria-label="Twitter">T</a>
+                    <a href="#" class="social-icon" aria-label="Instagram">I</a>
+                    <a href="#" class="social-icon" aria-label="LinkedIn">L</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
