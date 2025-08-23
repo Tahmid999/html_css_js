@@ -1,0 +1,1 @@
+Now a day's Prototype is not commonly use or needed in ES6, because in ES6 there have other easy method of prototype or inheritance and constructor :`).
