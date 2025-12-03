@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/output.css">
+</head>
+<body>
+    <div id="container">
+        <h1 class="font-bold text-3xl text-center p-4" id="first_head">Event Handle</h1>
+
+        <ul class="main_ul mt-2.5 mx-auto flex flex-col justify-center items-center text-center mb-10" id="main_ul">
+            <li class="text-xl p-1 border-1 w-[40%]">One</li>
+            <li class="text-xl p-1 border-1 w-[40%]">Two</li>
+            <li class="text-xl p-1 border-1 w-[40%]">Three</li>
+            <li class="text-xl p-1 border-1 w-[40%]">Four</li>
+        </ul>
+
+        <div class="form">
+            <div class="w-[40%] mx-auto">
+                <p class="mb-1">What is your Name</p>
+                <input type="text" class="border w-full"  id="name" placeholder="Enter Your Name">
+                <p id="show_name"></p>
+            </div>
+
+            <div class="mt-5 w-[40%] mx-auto">
+                <p>Choose Your Skills</p>
+                <input type="checkbox" name="Skills" value="C Programming">
+                <label for="">C Programming</label><br>
+                <input type="checkbox" name="Skills" value="Java">
+                <label for="">Java</label><br>
+                <input type="checkbox" name="Skills" value="Python">
+                <label for="">Python</label><br>
+                <input type="checkbox" name="Skills" value="JavaScript">
+                <label for="">JavaScript</label><br>
+                <p class="text-lg">Selecd Skills: <span id="result"></span></p>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./4_input_event_handle.js"></script>
+</body>
+</html>

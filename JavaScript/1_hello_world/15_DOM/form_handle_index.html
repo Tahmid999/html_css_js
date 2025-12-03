@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./src/output.css"> -->
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+<body>
+    <form action="" class="w-[60%] mx-auto mt-5 flex flex-col items-center" id="form">
+        <div>
+            <div class="for_name">
+                <label class="text-lg" for="name">Enter Your Full Name</label><br>
+                <input class="border-2 mb-2" type="text" name="name" id="name" placeholder="Enter full name">
+            </div>
+    
+            <div class="for_email">
+                <label class="text-lg" for="email">Enter Your Email</label><br>
+                <input class="border-2 mb-2" type="email" name="email" id="email" placeholder="example@email.com">
+            </div>
+            
+            <div class="for_pass">
+                <label class="text-lg" for="name">Enter a Password</label><br>
+                <input class="border-2 mb-2" type="password" name="password" id="password">
+            </div>
+    
+            <div class="for_select">
+                <label for="select" class="text-lg">Select Your Country:</label><br>
+                <select name="country" id="country" class="border-2 pr-10">
+                    <option value="Select One">Select One</option>
+                    <option value="Bangladesh">Bangladesh</option>
+                    <option value="India">India</option>
+                    <option value="Pakisthan">Pakisthan</option>
+                    <option value="USA">USA</option>
+                </select>
+            </div>
+
+            <div class="for_sumbit">
+                <button class="mt-5 px-5 py-1 bg-emerald-300 cursor-pointer" type="submit">Sumbit</button>
+            </div>
+        </div>
+        
+    </form>
+
+    <script src="./5_form_input_handle.js"></script>
+</body>
+</html>

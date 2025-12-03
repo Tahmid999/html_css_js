@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/output.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" class="w-[70%] mx-auto mt-5 flex flex-col" id="form">
+        <label class="text-xl font-bold mb-5" for="">Please Fill the form</label>
+        <label class="text-lg mb-2" for="title">Please Provide a Title</label>
+        <input class="border-2 mb-3 " type="text" name="title" id="title" placeholder="Enter Title">
+    
+        <label class="text-lg" >Please Provide A Description</label>
+        <textarea class="border-2" name="body" id="description" cols="30" rows="10"></textarea>
+    
+        <button class=" text-lg mt-5 px-5 py-1 bg-emerald-300 cursor-pointer hover:bg-emerald-400" type="submit">Sumbit</button>
+            
+    </form>
+
+    <ul id="posts" class="w-[70%] mx-auto mt-8 text-lg">
+            
+    </ul>
+
+    <script src="./ajax_post_request_handle.js"></script>
+</body>
+</html>

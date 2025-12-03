@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/output.css">
+</head>
+<body>
+    <div id="container">
+        <h1 class="font-bold text-3xl text-center p-4" id="first_head">Event Handle</h1>
+
+        <ul class="main_ul mt-2.5 mx-auto flex flex-col justify-center items-center text-center mb-3" id="main_ul">
+            <li class="text-xl p-1 border-1 w-[20%]">One</li>
+            <li class="text-xl p-1 border-1 w-[20%]">Two</li>
+            <li class="text-xl p-1 border-1 w-[20%]">Three</li>
+            <li class="text-xl p-1 border-1 w-[20%]">Four</li>
+        </ul>
+
+        <div class="flex justify-center mt-5">
+            <button class="btn border-2 rounded-[5px] p-2 px-4 bg-green-300 cursor-pointer hover:bg-green-400" id="one_btn">Add One!</button>
+        </div>
+        
+
+        <div class="bg-cyan-200 h-40 mt-5" id="axis">
+            <p>(<span id="x_axis">0</span>,<span id="y_axis">0</span>)</p>
+        </div>
+    </div>
+
+    <script src="./3_event_handle.js"></script>
+</body>
+</html>
